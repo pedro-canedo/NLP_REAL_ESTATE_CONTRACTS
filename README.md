@@ -1,53 +1,63 @@
-# Sistema de Extração de Contratos
+# Contract Extraction System (Sistema de Extração de Contratos)
 
-Este projeto é um aplicativo de extração de informações de contrato de documentos PDF usando um modelo de reconhecimento de entidades nomeadas (NER).
+This project is an application for extracting contract information from PDF documents using a Named Entity Recognition (NER) model.
+(Este projeto é um aplicativo para extração de informações de contratos em documentos PDF, utilizando um modelo de Reconhecimento de Entidades Nomeadas (NER).)
 
-## Requisitos
+## Requirements (Requisitos)
 
 - Python 3.8+
-- Pip (gerenciador de pacotes do Python)
+- Pip (Python package manager)
+  (Pip (gerenciador de pacotes Python))
 
-## Instalação
+## Installation (Instalação)
 
-1. Clone o repositório:
+1. Clone the repository: (Clone o repositório:)
    ```
-   git clone 'repository'
-   cd contract_extraction
+   https://github.com/pedro-canedo/NLP_REAL_ESTATE_CONTRACTS.git
    ```
-2. Crie e ative um ambiente virtual (recomendado):
+2. Create and activate a virtual environment (recommended): (Crie e ative um ambiente virtual (recomendado):)
+
    ```
-   python3 -m venv venv
-   source venv/bin/activate
+   python -m venv venv
+   venv\Scripts\activate (Windows)
+   source venv/bin/activate (Linux)
    ```
-3. Instale as dependências:
+
+3. Install the dependencies: (Instale as dependências:)
    ```
    pip install -r requirements.txt
    ```
 
-## Preparação do Modelo
+## Model Preparation (Preparação do Modelo)
 
-O sistema depende de um modelo NER pré-treinado para extrair os campos do contrato do texto. Esse modelo deve ser treinado para reconhecer os campos específicos do contrato que você está interessado.
+The system relies on a pre-trained NER model to extract the contract fields from the text. This model should be trained to recognize the specific contract fields you're interested in.
+(O sistema depende de um modelo NER pré-treinado para extrair os campos do contrato do texto. Este modelo deve ser treinado para reconhecer os campos específicos do contrato que lhe interessam.)
 
-Uma vez que você tem um modelo treinado, coloque-o no diretório do projeto e atualize o caminho do modelo no arquivo `application/main.py`.
+Once you have a trained model, place it in the project directory and update the model path in the `application/main.py` file.
+(Uma vez que você tenha um modelo treinado, coloque-o no diretório do projeto e atualize o caminho do modelo no arquivo `application/main.py`.)
 
-## Executando o Projeto
+## Running the Project (Executando o Projeto)
 
-Com o ambiente preparado e as dependências instaladas, você pode rodar o projeto com o seguinte comando:
+With the environment set up and the dependencies installed, you can run the project with the following command:
+(Com o ambiente preparado e as dependências instaladas, você pode rodar o projeto com o seguinte comando:)
 
-    ```
-    python -m application.main
-    ```
+```
+python application/main.py
+```
 
-Isso irá executar o script principal que coordena a extração do texto do PDF, a identificação dos campos do contrato e a criação do objeto Contrato.
+This will execute the main script that coordinates the extraction of the text from the PDF, the identification of the contract fields, and the creation of the Contract object.
+(Isso executará o script principal que coordena a extração do texto do PDF, a identificação dos campos do contrato e a criação do objeto Contrato.)
 
-## Testando
+## Testing (Testes)
 
-O diretório `/tests` contém testes unitários e de integração para o projeto. Você pode executá-los com o seguinte comando:
+The `/tests` directory contains unit and integration tests for the project. You can run them with the following command:
+(O diretório `/tests` contém testes unitários e de integração para o projeto. Você pode executá-los com o seguinte comando:)
 
 ```
 python -m unittest discover -s tests
 ```
 
-## Licença
+## License (Licença)
 
-Este projeto é licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+(Este projeto é licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.)
