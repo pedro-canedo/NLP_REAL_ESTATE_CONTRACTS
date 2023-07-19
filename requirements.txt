@@ -1,0 +1,3 @@
+spacy
+pdfminer.six
+pytest
